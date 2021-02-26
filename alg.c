@@ -1,6 +1,3 @@
-//
-// Created by Matteo Menichetti on 25/02/21.
-//
 #include "alg.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,7 +24,7 @@ void crivello(Number *number) {
     }
 }
 
-Number *createPartOf(long start, long end) {
+Number* createPartOf(long start, long end) {
     Number *number = (Number *) malloc(sizeof(Number)), *p = number;
 
     for (long j = start; j <= end; j++) {
