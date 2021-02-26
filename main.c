@@ -1,9 +1,9 @@
-#include "alg.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <fcntl.h>
+#include "alg.h"
 
-int main(){
-    crivello(createPartOf(2, 1000));
+int main() {
+    int n=1000;
+    crivello(createPartOf(2, n));
     return 0;
 }
