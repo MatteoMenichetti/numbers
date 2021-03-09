@@ -3,15 +3,15 @@
 #include <stdlib.h>
 
 Number *crivello(Number *number) {
-    Number *prec = number;
+    Number *previous = number;
     for (Number *p = number; p->next != NULL; p = p->next) {
         for (Number *actual = p->next; actual->next != NULL;
              actual = actual->next) {
             if (actual->n % p->n == 0) {
-                prec->next = actual->next;
-                prec = prec->next;
+                previous->next = actual->next;
+                previous = previous->next;
             } else
-                prec = actual;
+                previous = actual;
         }
     }
     return number;
