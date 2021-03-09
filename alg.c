@@ -1,19 +1,24 @@
 #include
+
 "alg.h"
+
 #include
+
 <stdio.h>
+
 #include
+
 <stdlib.h>
 
 Number *sieve(Number *number) {
-Number *previous = number;
-for (Number *p = number; p->next != NULL; p = p->next) {
+    Number *previous = number;
+    for (Number *p = number; p->next != NULL; p = p->next) {
         for (Number *actual = p->next; actual->next != NULL;
-actual = actual->next) {
-if (actual->n % p->n == 0) {
-previous->next = actual->next;
-free(actual);
-previous = previous->next;
+             actual = actual->next) {
+            if (actual->n % p->n == 0) {
+                previous->next = actual->next;
+                free(actual);
+                previous = previous->next;
             } else
                 previous = actual;
         }
