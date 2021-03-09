@@ -3,13 +3,7 @@
 #include <stdlib.h>
 #include <fcntl.h>
 
-void writeP(Number *p, int fd) {
-    printf("%d ", p->n);
-    dprintf(fd, "%d\n", p->n);
-}
-
-void crivello(Number *number) {
-    int fd = open("primesMiddleExec.txt", O_WRONLY | O_TRUNC | O_CREAT, 0666);
+Number *crivello(Number *number) {
     Number *prec = number;
     for (Number *p = number; p->next != NULL; p = p->next) {
         for (Number *actual = p->next; actual->next != NULL;
@@ -20,8 +14,8 @@ void crivello(Number *number) {
             } else
                 prec = actual;
         }
-        writeP(p, fd);
     }
+    return number;
 }
 
 Number* createPartOf(long start, long end) {

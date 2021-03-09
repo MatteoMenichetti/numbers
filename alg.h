@@ -9,6 +9,8 @@ typedef struct array {
     int n;
     struct array *next;
 } Number;
-void writeP(Number * p, int fd);
-void crivello(Number *number);
-Number* createPartOf(long start, long end);
+void writeP(Number *p, int fd);
+
+Number *crivello(Number *number);
+
+Number *createPartOf(long start, long end);
