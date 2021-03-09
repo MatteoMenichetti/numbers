@@ -1,14 +1,8 @@
-#include
+#include"alg.h"
 
-"alg.h"
+#include <stdio.h>
 
-#include
-
-<stdio.h>
-
-#include
-
-<stdlib.h>
+#include<stdlib.h>
 
 Number *sieve(Number *number) {
     Number *previous = number;
