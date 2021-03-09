@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-Number *crivello(Number *number) {
+Number *siev(Number *number) {
     Number *previous = number;
     for (Number *p = number; p->next != NULL; p = p->next) {
         for (Number *actual = p->next; actual->next != NULL;

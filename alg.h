@@ -10,6 +10,6 @@ typedef struct array {
     struct array *next;
 } Number;
 
-Number *crivello(Number *number);
+Number *sieve(Number *number);
 
 Number *createPartOf(long end);
