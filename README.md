@@ -1,4 +1,4 @@
-This project can be use for generate teh primes number between 2 and the input selected.
+This project can be use for generate the primes number between 2 and the input selected.
 
 The input number must be major of 2 for a simple reason.
 
