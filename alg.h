@@ -12,4 +12,4 @@ typedef struct array {
 
 Number *crivello(Number *number);
 
-Number *createPartOf(long start, long end);
+Number *createPartOf(long end);

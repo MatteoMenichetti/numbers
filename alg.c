@@ -17,10 +17,10 @@ Number *crivello(Number *number) {
     return number;
 }
 
-Number* createPartOf(long start, long end) {
+Number *createPartOf(long end) {
     Number *number = (Number *) malloc(sizeof(Number)), *p = number;
 
-    for (long j = start; j <= end; j++) {
+    for (long j = 2; j <= end; j++) {
         p->n = j;
         p->next = malloc(sizeof(Number));
         p = p->next;

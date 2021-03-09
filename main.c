@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) {
         exit(0);
     }
     if (atoi(argv[1]) > 2) {
-        Number *p = crivello(createPartOf(2, atoi(argv[1])));
+        Number *p = crivello(createPartOf(atoi(argv[1])));
         do {
             printf("%d, ", p->n);
             p = p->next;
