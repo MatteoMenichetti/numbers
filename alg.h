@@ -9,7 +9,6 @@ typedef struct array {
     int n;
     struct array *next;
 } Number;
-void writeP(Number *p, int fd);
 
 Number *crivello(Number *number);
 

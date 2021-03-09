@@ -1,7 +1,6 @@
 #include "alg.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <fcntl.h>
 
 Number *crivello(Number *number) {
     Number *prec = number;
