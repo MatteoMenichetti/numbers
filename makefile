@@ -8,9 +8,8 @@ install :
 
 	mkdir src
 	mkdir bin
-	mv alg.c src
+	mv *.c src
 	mv alg.h src
-	mv main.c src
 	mv main bin
 	mkdir tmp 
 	mv *.o tmp
