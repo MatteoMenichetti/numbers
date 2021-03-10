@@ -12,6 +12,7 @@ Number *sieve(Number *number) {
             if (actual->n % p->n == 0) {
                 previous->next = actual->next;
                 free(actual);
+                actual = previous;
                 previous = previous->next;
             } else
                 previous = actual;
@@ -22,11 +23,12 @@ Number *sieve(Number *number) {
 
 Number *createPartOf(long end) {
     Number *number = (Number *) malloc(sizeof(Number)), *p = number;
-
-    for (long j = 2; j <= end; j++) {
-        p->n = j;
-        p->next = malloc(sizeof(Number));
-        p = p->next;
-    }
+    if (number != NULL)
+        for (long j = 2; j <= end; j++) {
+            p->n = j;
+            p->next = malloc(sizeof(Number));
+            p = p->next;
+        }
+    else exit(0);
     return number;
 }
